@@ -58,7 +58,7 @@ export class APIUtils {
    * @returns {T} the return data, mapped to the type T.
    */
   public static async put<U, T>(url: string, body: U): Promise<APIData> { 
-    const response: AxiosResponse = await axios.post(url, body, { auth: {
+    const response: AxiosResponse = await axios.put(url, body, { auth: {
       username: process.env.USERNAME,
       password: process.env.PASSWORD
     }});
